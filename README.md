@@ -4,9 +4,9 @@ When setting up an MQ using the default settings, as specified in many JMS tutor
 
 So what's actually going on behind the scenes? There is an assertion that in the event that you don't have a matching spec, then you are using a default Connection Factory, which is validated by ensuring port and host name are blank. This assertion doesn't take into account a preoprly configred connection factory that happens to have a misconfigured SSL spec. The Exception throw for a bad spec will never be hit in the event that you provide a valid port or host name, and instead you recieve a generic assertion exception, which leads you to believe that your application is failing to connect to the associated queue due to having a port and host name specified, which obviously doesn't make any sense.
 
-### Cause
+### Causes
 
-The two most common causes are either miskeying the string value, or using a TLS spec type for your SSLCipherSpec.
+The most common causes are either miskeying the string value, using a TLS spec type for your SSLCipherSpec while using IBM's cipher list, or not being able to unlock your keystore due to password issues.
 
 ### Fixing
 
@@ -14,4 +14,4 @@ The fix for this issue is simply to ensure that you have an SSLCipherSpec value 
 
 ### Resolutions
 
-If you have any additional questions not answered by the above, please reach out to [github@trvorbennett.us], and I may be able to help and document those problems as well. If you have additional details you've worked through, feel free to create a pull request for this project, and I'll add the info to this readme.
+If you have any additional questions not answered by the above, please reach out to github@trvorbennett.us, and I may be able to help and document those problems as well. If you have additional details you've worked through, feel free to create a pull request for this project, and I'll add the info to this readme.
