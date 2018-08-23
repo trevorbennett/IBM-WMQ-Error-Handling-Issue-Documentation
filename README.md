@@ -11,3 +11,7 @@ The two most common causes are either miskeying the string value, or using a TLS
 ### Fixing
 
 The fix for this issue is simply to ensure that you have an SSLCipherSpec value that matches one of the accepted values within your connection factory. This list should be static, and will almost certainly match [IBM's published list which can be found here](https://www-01.ibm.com/software/webservers/httpservers/doc/v10/ibm/9acdciph.htm).
+
+### Resolutions
+
+If you have any additional questions not answered by the above, please reach out to [github@trvorbennett.us], and I may be able to help and document those problems as well. If you have additional details you've worked through, feel free to create a pull request for this project, and I'll add the info to this readme.
