@@ -17,6 +17,11 @@ The most common causes are either miskeying the string value, using a TLS spec t
 
 If you have arrived at this page, the odds are extremely high that your issue is the first one, and you have triple checked every field to avoid the obvious issues with the last two. In order to fix the SSLCipherSpec issue, you need to set the VM argument  -Dcom.ibm.mq.cfg.useIBMCipherMappings=false when starting your server or running any given test. Additional explanation for why this is the case can be found [here](https://developer.ibm.com/answers/questions/178651/what-tls-ciphersuites-are-supported-when-connectin.html)
 
+If this doesn't fix your issue, ensure that there are no unexpected spaces or mispellings within your keystore path, your keystore password, your queueManager name, your queue name, etc.
+
+You can attempt to open your keystore with your password just to ensure that the password is valid by entering
+`keystore -v -list -keystore path/for/your/keystore.jks
+
 ### Contributing
 
 If you have any additional questions not answered by the above, please reach out to github@trvorbennett.us, and I may be able to help and document those problems as well. If you have additional details you've worked through, feel free to create a pull request for this project, and I'll add the info to this readme.
