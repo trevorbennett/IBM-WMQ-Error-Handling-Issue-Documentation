@@ -20,7 +20,8 @@ If you have arrived at this page, the odds are extremely high that your issue is
 If this doesn't fix your issue, ensure that there are no unexpected spaces or mispellings within your keystore path, your keystore password, your queueManager name, your queue name, etc.
 
 You can attempt to open your keystore with your password just to ensure that the password is valid by entering
-```    keystore -v -list -keystore path/for/your/keystore.jks
+```
+keystore -v -list -keystore path/for/your/keystore.jks
 ```
 ### Contributing
 
